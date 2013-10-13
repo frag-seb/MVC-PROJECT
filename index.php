@@ -29,3 +29,4 @@
 		$controller = new errorController;
 		$controller->error($e->getMessage());
 	}
+?>
