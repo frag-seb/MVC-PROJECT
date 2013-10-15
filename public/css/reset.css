@@ -1,0 +1,149 @@
+/* 	*************************************************
+*	Basis-Stylesheet mit Reset, Restaurierung und Basisformatierung  
+*	Stand:  1.0.0
+*	Datei: basis.css
+*	Media:  all
+*	Datum: 28. Dez. 2012
+*	Autor: Jochen Mandl
+************************************************* 	*/
+
+@media all {
+
+/* ***************************************
+   TEIL I - Reset 
+***************************************   */
+
+html { overflow-y: scroll; } 
+
+body, div, 
+h1, h2, h3, h4, h5, h6, 
+p, blockquote, pre, code, 
+ul, ol, li, dl, dt, dd, 
+table, th, td, 
+form, fieldset, legend, input, textarea {
+  padding: 0; 
+  margin: 0;
+}
+
+/* ***************************************
+   TEIL II - Restaurierung der Abstaende  
+***************************************   */
+
+/* margin-bottom für diverse Elemente */ 
+h1, h2, h3, h4, h5, h6, 
+p, blockquote, pre, 
+ul, ol, dl {
+  margin-bottom: 1em; 
+}
+
+/* Zitate einrücken */ 
+blockquote { margin: 1em 2em; }
+
+/* Alle Listen wieder einrücken */ 
+ul, ol, dl { margin-left: 1em; }
+
+/* Listenelemente etwas mehr einrücken */ 
+li { margin-left: 2em; }
+
+/* Definitionen in Definitionslisten noch mehr einruecken */ 
+dd {margin-left: 2em; }
+
+/* Verschachtelte Listen ohne Aussenabstand oben/unten */ 
+ul ul, ul ol, ul dl, 
+ol ul, ol ol, ol dl, 
+dl ul, dl ol, dl dl {
+  margin-top: 0; 
+  margin-bottom: 0; 
+}
+
+/* Aufzaehlungszeichen */ 
+ul { list-style-type: square; }
+ol { list-style-type: decimal; }
+
+ul ul { list-style-type: disc; }
+ol ol { list-style-type: lower-alpha; } 
+
+ul ol { list-style-type: decimal; }
+ol ul { list-style-type: square; }
+
+/* Tabellen */ 
+table { border-collapse: collapse; border-spacing: 0; }
+td { vertical-align: top; }
+
+/* Formulare und verlinkte Bilder ohne Rahmen */ 
+fieldset, a img { border: none; }
+
+/* ***************************************
+   TEIL III - Grundlegende Formatierung  
+***************************************   */
+
+/* Schriftformatierung */ 
+body {
+  background-color: white; 
+  color: black; 
+  font-family: Verdana, Arial, Helvetica, sans-serif; 
+  font-size: 81.25%; 
+}
+/* Größe(24px) : h1(12px) * 100 = 200%  */
+
+h1 { font-size: 200%; }				/* 24px */
+h2 { font-size: 183.33%; }			/* 22px */
+h3 { font-size: 166.66%; }			/* 20px */
+h4 { font-size: 150.00%; }			/* 18px */
+h5 { font-size: 133.33%; }			/* 16px */
+h6 { font-size: 116.67%; }			/* 14px */
+
+/* Link ohne unterschreichung */ 
+
+a{ text-decoration: none; }
+
+/* Floats clearen */ 
+.clearing { clear: both; }
+
+/* Gefloatete Elemente umschließen */ 
+.containingfloats {
+  overflow: hidden; 
+}
+/* EasyClearing für gefloatete Elemente */ 
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	font-size: 0;
+	height: 0;
+	visibility: hidden;
+}
+
+/* EasyClearing Patch für IE 7 */
+*:first-child+html ,clearfix { min-height: 0; }
+
+/* EasyClearing Patch für IE 6 */
+* html .clearfix { height: 1%; }
+
+/* Elemente verstecken */
+.hideMe {
+  position: absolute; 
+  left: -32768px; 
+  top: -32768px; 
+  width: 0;
+  height: 0; 
+  font-size: 0; 
+}
+.hide-text {
+	text-indent: -9999px;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.text-none {
+	display: none;
+}
+/* ***************************************
+   TEIL IIII - Grundlegende Formulare  
+***************************************   */
+button{ cursor: pointer; }
+
+} /* Ende @media - nicht loeschen */ 
+
+/* ***************************************
+   E N D E   D E S   S T Y L E S H E E T S
+   *************************************** */

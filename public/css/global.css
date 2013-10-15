@@ -1,0 +1,28 @@
+/* 	*************************************************
+*	Stylesheet für für MVC Projekt 
+*	wird im <head> der Webseiten aufgerufen  
+*	Stand:  1.0.0
+*	Datei: global.css
+*	Media:  all
+*	Datum: 14. Okt. 2013
+*	Autor: Jochen Mandl
+************************************************* 	*/
+
+
+/* content Schrift */
+
+/*  
+ @import url(http://fonts.googleapis.com/css?family=Open+Sans:800italic,400,700);
+ */
+
+@import url(./reset.css); 
+
+@import url(./screen.css);
+
+@import url(./print.css);
+
+
+
+/* ***************************************
+   E N D E   D E S   S T Y L E S H E E T S
+   ***************************************  */

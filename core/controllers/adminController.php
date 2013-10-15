@@ -5,26 +5,24 @@
  * @author Jochen
  *
  */
-	class loginController extends baseController{
+	class adminController extends baseController{
 		
 		public function __construct(){
 			parent::__construct();
 		}
 		public function index(){
-			$template = 'login';
-		    $posts = 'login';
+            $template = 'index';
+            $posts = 'posts';
 
             $this->load->model($posts);
-			$this->load->view('index');	
-				
-			$this->index->setTemplate($template);
-            $this->index->assign('title', 'Dynamic title');  
+            $this->load->view('index');
+
+            $this->index->setTemplate($template);
+            $this->index->assign('title', 'Dynamic title');
             $this->index->assign('posts', $this->{$posts}->getEntries());
             
             $tpl = $this->index->loadTemplate();
-            parent::display($tpl);
+            self::display($tpl);
         }
-		
-		
 
 	}

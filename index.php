@@ -1,4 +1,5 @@
 <?php
+$start = microtime(true);
 /**
  * 
  * Enter description here ...
@@ -19,14 +20,19 @@
 
 	try{
 	    if(!empty($_SESSION['USERID'])){
-            require_once(CONTROLLER_PATH.'loginController.php');
-            $login = new loginController;
-            $login->index(); 
+            require_once(CONTROLLER_PATH.'indexController.php');
+            $login = new indexController;
+            $login->login();
 	    }else{
-            Router::route(new Request);
-	    }
+	    	Router::route(new Request);
+	    }	    
 	}catch(Exception $e){
 		$controller = new errorController;
 		$controller->error($e->getMessage());
 	}
+	$end = microtime(true);
+$laufzeit = round($end-$start, 4);
+ 
+echo "Laufzeit: ".$laufzeit." Sekunden!";
+	
 ?>

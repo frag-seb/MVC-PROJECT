@@ -31,20 +31,19 @@
             $plattform = $this->plattform;
             $path = SITE_PATH.TEMP_PATH.$plattform.'/';
 
-            $file = $path . $tpl . '.php';
+            $file = $path . $tpl . '.tpl';
             $exists = file_exists($file);
 
-            if ($exists){  
- 
+            if ($exists){
                 ob_start();  
- 
-                include $file;  
+ 				include $path.'base/header.tpl';
+                include $file;                
+ 				include $path.'base/footer.tpl';
                 $output = ob_get_contents();
                 ob_end_clean();  
                    
                 return $output;  
-            }  
-             
+            }
             throw new Exception('could not find template.'); 
         }    
     }

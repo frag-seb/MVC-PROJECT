@@ -22,5 +22,8 @@
 				return $return;
 			}
 			return false;
-		}	
+		}
+		final protected static function display($tpl){
+		    print $tpl;
+		}
 	}
