@@ -1,0 +1,23 @@
+{
+  "name": "fragseb/Observer",
+  "description": "Observer Test",
+  "license": "MIT",
+  "keywords": ["fragseb", "observer"],
+  "authors": [
+    {
+      "name": "Jochen Mandl",
+      "email": "mandl.js@googlemail.com"
+    }
+  ],
+  "require": {},
+  "require-dev": {
+    "phpunit/phpunit": "4.0.*",
+    "mockery/mockery": "^0.9.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "": ["app/", "core/"],
+      "FragSeb\\": "app"
+    }
+  }
+}
